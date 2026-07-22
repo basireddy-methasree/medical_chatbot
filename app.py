@@ -7,7 +7,11 @@ from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.prompts import ChatPromptTemplate
 from dotenv import load_dotenv
 from src.prompt import system_prompt
+
+import certifi
 import os
+
+os.environ["SSL_CERT_FILE"] = certifi.where()
 
 load_dotenv()
 
